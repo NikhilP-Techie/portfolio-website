@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { NavLink } from 'react-router'
+import logo from "../../../src/assets/logo.png"
 
 
 const navigation = [
@@ -27,7 +28,7 @@ function Header() {
                     <a href="/" className="-m-1.5 p-1.5">
                         <img
                             alt=""
-                            src="/src/assets/logo.png"
+                            src={logo}
                             className="h-12 w-auto rounded-md"
                         />
                     </a>

@@ -1,4 +1,5 @@
 import React from 'react'
+import aboutImg from "../../../src/assets/about.svg"
 
 
 const aboutContent = [
@@ -41,7 +42,7 @@ function About() {
             ))}
           </div>
           </div>
-          <div className='invisible sm:visible md:visible'><img className='rounded-lg' src="/src/assets/about.svg" alt="" /></div>
+          <div className='invisible sm:visible md:visible'><img className='rounded-lg' src={aboutImg} alt="" /></div>
         </div>
       </div>
     </section>
