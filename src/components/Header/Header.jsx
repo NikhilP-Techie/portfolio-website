@@ -27,7 +27,7 @@ function Header() {
                     <a href="/" className="-m-1.5 p-1.5">
                         <img
                             alt=""
-                            src="/src/assets/vectorstock_47004087.png"
+                            src="/src/assets/logo.png"
                             className="h-12 w-auto rounded-md"
                         />
                     </a>
