@@ -16,26 +16,26 @@ function Hero() {
         };
     }, []);
     return (
-        <div className="bg-white">
+        <div className="bg-white hero-image">
             <div className="relative isolate px-6 pt-14 lg:px-8">
                 <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                        <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                        <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-black">
                             Announcing our next round of funding.{' '}
-                            <a href="#" className="font-semibold text-indigo-600">
+                            <a href="#" className="font-semibold text-blue-600">
                                 <span aria-hidden="true" className="absolute inset-0" />
                                 Read more <span aria-hidden="true">&rarr;</span>
                             </a>
                         </div>
                     </div>
                     <div className="text-center">
-                        <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
-                            Hi, I am <span style={{ color: '#3f64ff'}}>Nikhil</span> I work on
+                        <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl dark:text-black">
+                            Hi, I am <span style={{ color: '#3f64ff' }}>Nikhil</span> I work on
                         </h1>
-                        <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+                        <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl dark:text-black">
                             <span ref={el} />
                         </h1>
-                        <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+                        <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8 dark:text-black">
                             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
                             fugiat veniam occaecat.
                         </p>

@@ -22,7 +22,7 @@ function Header() {
 
     }
     return (
-        <header className="fixed bg-black inset-x-0 top-0 z-50 h-24">
+        <header className="fixed bg-black dark:bg-white inset-x-0 top-0 z-50 h-24">
             <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
                     <a href="/" className="-m-1.5 p-1.5">
@@ -45,15 +45,12 @@ function Header() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item, index) => (
-                        <NavLink key={index} to={item.href} style={{ lineHeight: 0 }} className={({ isActive }) => ` text-base ${isActive ? "text-blue-600 font-extrabold text-lg" : "text-white"}`}>
+                        <NavLink key={index} to={item.href} style={{ lineHeight: 0 }} className={({ isActive }) => ` text-base ${isActive ? "text-blue-600 font-extrabold text-lg" : "text-white dark:text-black"}`}>
                             {item.name}
                         </NavLink>
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" className="bg-blue-500 shadow-lg shadow-blue-500/50 px-5 py-2 rounded-md text-white">
-                        Log in <span aria-hidden="true">&rarr;</span>
-                    </a>
                 </div>
             </nav>
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -80,21 +77,18 @@ function Header() {
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
-                                {navigation.map((item) => (
-                                    <a
-                                        key={item.name}
-                                        href={item.href}
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                    >
+                                {navigation.map((item, index) => (
+                                    <NavLink
+                                        key={index}
+                                        to={item.href}
+                                        className={({ isActive }) => `-mx-3 block rounded-lg nikhil-${item.href}-${isActive} px-3 py-2 text-base ${isActive ? "text-blue-600 font-extrabold text-lg" : "text-black dark:text-black"}`}>
                                         {item.name}
-                                    </a>
+                                    </NavLink>
                                 ))}
+                                {/* className={({ isActive }) => `-mx-3 block rounded-lg px-3 py-2 text-base ${isActive ? "text-blue-600 font-extrabold text-lg" : "text-white dark:text-black"}`} */}
                             </div>
                             <div className="py-6">
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                >
+                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-black">
                                     Log in
                                 </a>
                             </div>
